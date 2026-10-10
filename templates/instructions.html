@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Instructions | ExamSecure{% endblock %}
+{% block content %}
+<section class="narrow">
+  <div class="eyebrow">BEFORE YOU START</div>
+  <h1 class="page-title">Exam instructions</h1>
+  <p class="muted">Welcome, {{ name }}. Please read these instructions carefully.</p>
+  <div class="stats-grid">
+    <div class="stat-card"><small>QUESTIONS</small><strong>{{ count }}</strong></div>
+    <div class="stat-card"><small>DURATION</small><strong>{{ duration }} min</strong></div>
+    <div class="stat-card"><small>MARKS</small><strong>{{ count }}</strong></div>
+  </div>
+  <div class="panel">
+    <h3>Important rules</h3>
+    <ul class="instruction-list">
+      <li>Each question has one correct answer.</li>
+      <li>Each correct answer earns one mark; there is no negative marking.</li>
+      <li>Use Next and Previous to navigate between questions.</li>
+      <li>The timer continues while the exam page is open. When time expires, the exam will be submitted.</li>
+      <li>Click Submit Exam when you have finished.</li>
+      <li>This is a local demo. Do not use it for a real high-stakes examination until authentication, administrator access, and deployment security are added.</li>
+    </ul>
+  </div>
+  <div class="actions between">
+    <a class="btn secondary" href="{{ url_for('home') }}">← Back</a>
+    <a class="btn primary" href="{{ url_for('start_exam') }}">I understand — Start exam →</a>
+  </div>
+</section>
+{% endblock %}

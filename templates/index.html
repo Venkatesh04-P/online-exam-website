@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Welcome | ExamSecure{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="live-dot"></span> ONLINE EXAMINATION SYSTEM</div>
+    <h1>Your next step<br><span>starts here.</span></h1>
+    <p class="hero-text">A simple, secure and focused way to complete your online examination. Enter your details to review the instructions and begin.</p>
+    <div class="feature-row">
+      <div class="feature"><span class="feature-icon">◷</span><div><b>Timed test</b><small>15 minutes</small></div></div>
+      <div class="feature"><span class="feature-icon">✓</span><div><b>Auto scoring</b><small>Instant result</small></div></div>
+    </div>
+  </div>
+  <div class="login-card">
+    <div class="card-icon">✦</div>
+    <h2>Ready to begin?</h2>
+    <p class="muted">Enter your details to continue.</p>
+    <form method="post" class="form-stack">
+      <label for="student_name">Full name</label>
+      <input id="student_name" name="student_name" maxlength="80" placeholder="Enter your full name" required>
+      <label for="student_id">Student ID</label>
+      <input id="student_id" name="student_id" maxlength="40" placeholder="e.g. STU1024" required>
+      <button class="btn primary full" type="submit">Continue to instructions <span>→</span></button>
+    </form>
+    <p class="tiny-note">Demo project: this form identifies the attempt; it is not a secure login.</p>
+  </div>
+</section>
+<section class="below-hero">
+  <div><span class="mini-number">01</span><b>Read instructions</b><p>Understand the rules before starting.</p></div>
+  <div><span class="mini-number">02</span><b>Answer questions</b><p>Move through the MCQs at your pace.</p></div>
+  <div><span class="mini-number">03</span><b>View your result</b><p>Submit and see your score.</p></div>
+</section>
+{% endblock %}
